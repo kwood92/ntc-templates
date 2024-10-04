@@ -1,0 +1,22 @@
+Flags: D - DYNAMIC
+Columns: ADDRESS, NETWORK, INTERFACE
+#   ADDRESS            NETWORK         INTERFACE                  
+;;; INET Uplink (to M1)
+0   103.13.86.26/30    103.13.86.24    vlan11@vlan975@sfp-sfpplus1
+;;; MGMT Uplink(to M1)
+1   100.65.255.138/30  100.65.255.136  vlan10@vlan975@sfp-sfpplus1
+;;; MGMT Loopback
+2   100.100.0.106/32   100.100.0.106   Lo0                        
+;;; Cust: ComWire IT SA Downlink
+3   43.245.73.49/30    43.245.73.48    vlan4050@sfp-sfpplus11     
+;;; MGMT Link to 5-YDCE-CWI-YDCE01-PE02
+4   100.64.5.1/30      100.64.5.0      vlan1@bond1                
+;;; INET Link to 5-YDCE-CWI-YDCE01-PE02
+5   103.13.87.121/30   103.13.87.120   vlan2@bond1                
+;;; INET Loopback
+6   103.13.86.241/32   103.13.86.241   Lo1                        
+;;; INET Uplink (to M1)
+7   103.13.86.30/30    103.13.86.28    vlan12@vlan975@sfp-sfpplus1
+;;; INETAU-IX SA
+8   218.100.54.66/25   218.100.54.0    vlan111@sfp-sfpplus1       
+9 D 100.64.247.75/32   100.64.1.248    pppoe-out1  
