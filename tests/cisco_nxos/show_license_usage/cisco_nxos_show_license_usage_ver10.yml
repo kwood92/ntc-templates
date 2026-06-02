@@ -1,0 +1,8 @@
+---
+parsed_sample:
+  - comments: "LAN license for Nexus 9300-XF"
+    expiry_date: ""
+    feature: "LAN_ENTERPRISE_SERVICES_PKG"
+    installed: ""
+    license_count: "1"
+    status: "IN USE"

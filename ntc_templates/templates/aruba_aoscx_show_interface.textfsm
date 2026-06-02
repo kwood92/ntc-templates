@@ -9,6 +9,7 @@ Value MAC_ADDRESS (\S+)
 Value MTU (\d+)
 Value IF_TYPE (\S+)
 Value IP_ADDRESS (\S+)
+Value List SECONDARY_IP_ADDRESS (\S+)
 Value DUPLEX (\w+)
 Value QOS_TRUST (\S+)
 Value SPEED (\S+\s\S+) 
@@ -27,6 +28,7 @@ Value RX_MCAST_PACKETS (\d+)
 Value RX_BROADCAST_PACKETS (\d+)
 Value RX_ERRORS (\d+)
 Value RX_DROPPED (\d+)
+Value RX_FILTERED (\d+)
 Value RX_CRC_FCS (\d+)
 Value TX_TOTAL_PACKETS (\d+)
 Value TX_TOTAL_BYTES (\d+)
@@ -35,8 +37,10 @@ Value TX_MCAST_PACKETS (\d+)
 Value TX_BROADCAST_PACKETS (\d+)
 Value TX_ERRORS (\d+)
 Value TX_DROPPED (\d+)
+Value TX_FILTERED (\d+)
 Value TX_CRC_FCS (\S+)
 Value TX_COLLISION (\d+)
+Value VRF (\S+)
 
 Start
   ^\s*(Interface|Aggregate)\s+\S+\s+is -> Continue.Record
@@ -47,7 +51,8 @@ Start
   ^\s*State\s*information\s*:\s*${LINK_STATE_INFO}
   ^\s*Hardware\s*:\s*${HW_TYPE},?\s*MAC\s*Address:\s+${MAC_ADDRESS}
   ^\s*MAC\s+Address\s*:\s*${MAC_ADDRESS}
-  ^\s*IPv4\s+address\s+${IP_ADDRESS}
+  ^\s*IPv4\s+address\s+${IP_ADDRESS}$$
+  ^\s*IPv4\s+address\s+${SECONDARY_IP_ADDRESS}\s+secondary
   ^\s*MTU\s*${MTU}
   ^\s*Type\s*${IF_TYPE}
   ^\s*${DUPLEX}-duplex
@@ -77,16 +82,22 @@ Start
   ^\s*Aggregated-interfaces\s*:\s+(?:\S+\s+){7}${AGGREGATED_INTERFACES}\s* -> Continue
   ^\s*Aggregated-interfaces\s*:
   ^\s*Aggregation-key
+  ^\s*Subinterface\s+count
   ^\s*Aggregate\s+mode
   ^\s*Persona
+  ^\s*rate-limit\s+unknown-unicast
   ^\s*rate-limit\s+broadcast
+  ^\s*rate-limit\s+multicast
   ^\s*L3\s+Counters
   ^\s*MDI mode
+  ^\s*Leader-follower\s+mode
   ^\s*Rate collection interval
   ^\s*Energy-Efficient
   ^\s*Rx -> Rx
   ^\s*Rate\s+RX\s+TX\s+Total -> Rate
   ^\s*Statistic\s+RX\s+TX\s+Total -> Statistic
+  ^\s*active-gateway\s
+  ^\s*VRF\s+name\s+is\s+${VRF}
   ^. -> Error
 
 Rx
@@ -132,6 +143,7 @@ Statistic
   ^\s*Jumbos
   ^\s*Pause\s+Frames
   ^\s*Dropped\s+${RX_DROPPED}\s+${TX_DROPPED}\s+\d+
+  ^\s*Filtered\s+${RX_FILTERED}\s+${TX_FILTERED}\s+\d+
   ^\s*Errors\s+${RX_ERRORS}\s+${TX_ERRORS}\s+\d+
   ^\s+CRC/FCS\s+${RX_CRC_FCS}\s+${TX_CRC_FCS}\s+\d+
   ^\s+Collision\s+\S+\s+${TX_COLLISION}\s+\d+

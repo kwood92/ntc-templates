@@ -1,0 +1,11 @@
+
+License Authorization:
+  Status: Not Applicable
+
+(LAN_ENTERPRISE_SERVICES_PKG):
+  Description: LAN license for Nexus 9300-XF
+  Count: 1
+  Version: 1.0
+  Status: IN USE
+  Enforcement Type: NOT ENFORCED
+  License Type: Generic

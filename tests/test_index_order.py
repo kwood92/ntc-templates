@@ -4,7 +4,6 @@ import re
 
 from tests import load_index_data
 
-
 OS_CHOICES = [
     "a10",
     "alcatel_aos",
@@ -26,6 +25,7 @@ OS_CHOICES = [
     "cisco_apic",
     "cisco_asa",
     "cisco_ftd",
+    "cisco_fxos",
     "cisco_ios",
     "cisco_nvfis",
     "cisco_nxos",
@@ -45,8 +45,10 @@ OS_CHOICES = [
     "extreme_slxos",
     "f5_ltm",
     "fortinet",
+    "fsas_sir",
     "hp_comware",
     "hp_procurve",
+    "huawei_ont",
     "huawei_smartax",
     "huawei_vrp",
     "ipinfusion_ocnos",
@@ -74,7 +76,7 @@ CHOICES_STRING = "|".join(OS_CHOICES)
 RE_TEMPLATE_OS = re.compile(rf"^({CHOICES_STRING})")
 
 
-def check_order(  # pylint: disable=too-many-arguments,too-many-arguments,too-many-return-statements
+def check_order(  # pylint: disable=too-many-arguments,too-many-positional-arguments,too-many-return-statements
     current_os,
     prior_os,
     cmd_len,
