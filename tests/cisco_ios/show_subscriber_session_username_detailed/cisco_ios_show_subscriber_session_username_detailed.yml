@@ -1,0 +1,24 @@
+---
+parsed_sample:
+  - aaa_id: "00CD498C"
+    auth_status: "authen"
+    context: "7F1FF7DEBAF0"
+    flow_handle: "0"
+    handle: "A0000B64"
+    identity: "foo@bar.com"
+    interface: "Virtual-Access2.274"
+    ipv4_address: "1.2.3.4"
+    last_changed: "3w0d"
+    qos_class_id:
+      - "1"
+    qos_direction:
+      - "Out"
+    qos_policy_name:
+      - "nbn50"
+    qos_source:
+      - "Peruser"
+    session_uptime: "3w0d"
+    state: "authen"
+    switch_id: "1077186"
+    type: "PPPoE"
+    uid: "1184"

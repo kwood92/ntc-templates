@@ -1,0 +1,32 @@
+Type: PPPoE, UID: 1184, State: authen, Identity: foo@bar.com
+IPv4 Address: 1.2.3.4
+Session Up-time: 3w0d    , Last Changed: 3w0d
+Interface: Virtual-Access2.274
+Switch-ID: 1077186
+
+Policy information:
+  Context 7F1FF7DEBAF0: Handle A0000B64
+  AAA_id 00CD498C: Flow_handle 0
+  Authentication status: authen
+
+Classifiers:
+Class-id    Dir   Packets    Bytes                  Pri.  Definition
+0           In    171048009  69045703139            0    Match Any
+1           Out   379807244  455035064686           0    Match Any
+
+Features:
+
+QoS Policy Map:
+Class-id    Dir   Policy Name Source
+1           Out   nbn50       Peruser
+
+IP Config:
+M=Mandatory, T=Tag, Mp=Mandatory pool
+Flags  Peer IP Address                  Pool Name             Interface
+       1.2.3.4                          [None]                Lo2
+       ::                               [None]                [None]
+
+Configuration Sources:
+Type  Active Time  AAA Service ID  Name
+USR   3w0d         -               Peruser
+INT   3w0d         -               Virtual-Template5
