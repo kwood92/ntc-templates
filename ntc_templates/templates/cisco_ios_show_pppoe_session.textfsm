@@ -1,0 +1,24 @@
+Value UNIQ_ID (\d+)
+Value SID (\d+)
+Value REMOTE_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value LOCAL_MAC ([0-9a-fA-F]{4}\.[0-9a-fA-F]{4}\.[0-9a-fA-F]{4})
+Value PORT (\S+)
+Value VLAN (\d+)
+Value VT (\d+)
+Value VA (\S+)
+Value VA_STATE (\S+)
+Value STATE (\S+)
+
+Start
+  ^\s*\d+\s+sessions?\s+in\s+.+State\s*$$
+  ^\s*\d+\s+sessions?\s+total\s*$$
+  ^Uniq\s+ID\s+PPPoE\s+RemMAC\s+Port\s+VT\s+VA\s+State\s*$$
+  ^\s+SID\s+LocMAC\s+VA-st\s+Type\s*$$ -> Sessions
+  ^\s*$$
+
+Sessions
+  ^\s+${UNIQ_ID}\s+${SID}\s+${REMOTE_MAC}\s+${PORT}\s+${VT}\s+${VA}\s+${STATE}\s*$$
+  ^\s+${LOCAL_MAC}\s+VLAN:\s+${VLAN}\s+${VA_STATE}\s*$$ -> Record
+  ^\s+${LOCAL_MAC}\s+\S+\s+${VA_STATE}\s*$$ -> Record
+  ^\s*$$
+  ^. -> Error

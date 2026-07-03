@@ -1,0 +1,16 @@
+     1 session  in LCP_NEGOTIATION (LCP) State
+   357 sessions in LOCALLY_TERMINATED (PTA) State
+   358 sessions total
+
+Uniq ID  PPPoE  RemMAC          Port                    VT  VA         State
+           SID  LocMAC                                      VA-st      Type
+    850  28054  f41e.5701.2526  Gi0/0/2.125              5  Vi2.262    PTA
+                00a2.ee8d.3d04  VLAN: 125                   UP
+    359   1657  c84f.86fc.0a03  Gi0/0/2.125              5  Vi2.231    PTA
+                00a2.ee8d.3d04  VLAN: 125                   UP
+    827  29639  f684.c63f.b7bb  Gi0/0/2.125              5  Vi2.338    PTA
+                00a2.ee8d.3d04  VLAN: 125                   UP
+    956  25607  0009.0f09.000d  Gi0/0/2.125              5  Vi2.318    PTA
+                00a2.ee8d.3d04  VLAN: 125                   UP
+   1111  59765  9a25.4a5a.404d  Gi0/0/2.125              5  Vi2.351    PTA
+                00a2.ee8d.3d04  VLAN: 125                   UP
