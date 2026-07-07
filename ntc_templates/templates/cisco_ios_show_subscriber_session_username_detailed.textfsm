@@ -1,0 +1,37 @@
+Value TYPE (\S+)
+Value UID (\d+)
+Value STATE (\S+)
+Value IDENTITY (\S+)
+Value IPV4_ADDRESS (\S+)
+Value SESSION_UPTIME (\S+)
+Value LAST_CHANGED (\S+)
+Value INTERFACE (\S+)
+Value SWITCH_ID (\d+)
+Value CONTEXT (\S+)
+Value HANDLE (\S+)
+Value AAA_ID (\S+)
+Value FLOW_HANDLE (\S+)
+Value AUTH_STATUS (\S+)
+Value List QOS_CLASS_ID (\d+)
+Value List QOS_DIRECTION (\S+)
+Value List QOS_POLICY_NAME (\S+)
+Value List QOS_SOURCE (\S+)
+
+Start
+  ^Type:\s+${TYPE},\s+UID:\s+${UID},\s+State:\s+${STATE},\s+Identity:\s+${IDENTITY}\s*$$
+  ^IPv4\s+Address:\s+${IPV4_ADDRESS}\s*$$
+  ^Session\s+Up-time:\s+${SESSION_UPTIME}\s*,\s+Last\s+Changed:\s+${LAST_CHANGED}\s*$$
+  ^Interface:\s+${INTERFACE}\s*$$
+  ^Switch-ID:\s+${SWITCH_ID}\s*$$
+  ^\s+Context\s+${CONTEXT}:\s+Handle\s+${HANDLE}\s*$$
+  ^\s+AAA_id\s+${AAA_ID}:\s+Flow_handle\s+${FLOW_HANDLE}\s*$$
+  ^\s+Authentication\s+status:\s+${AUTH_STATUS}\s*$$
+  ^QoS\s+Policy\s+Map: -> Qos
+  ^.*$$
+
+Qos
+  ^Class-id\s+Dir\s+Policy\s+Name\s+Source\s*$$
+  ^\s*${QOS_CLASS_ID}\s+${QOS_DIRECTION}\s+${QOS_POLICY_NAME}\s+${QOS_SOURCE}\s*$$
+  ^IP\s+Config: -> Start
+  ^\s*$$ -> Start
+  ^.*$$ -> Start
