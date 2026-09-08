@@ -1,6 +1,7 @@
 """Tasks for use with Invoke."""
 
 import os
+import re
 import sys
 from invoke import task
 
@@ -49,6 +50,25 @@ def is_truthy(arg):
     return bool(strtobool(arg))
 
 
+def sanitize_image_tag(tag: str) -> str:
+    """Coerce an arbitrary version string into a valid Docker image tag.
+
+    Docker tags may only contain [A-Za-z0-9_.-] and cannot start with a period or dash, so
+    characters such as the ``+`` in a PEP 440 local version (e.g. ``9.1.0+summit.1``) are
+    replaced with an underscore.
+
+    Args:
+        tag (str): Candidate image tag.
+
+    Returns:
+        str: Tag containing only characters accepted by Docker.
+    """
+    sanitized = re.sub(r"[^A-Za-z0-9_.-]", "_", tag)
+    if sanitized.startswith((".", "-")):
+        sanitized = f"_{sanitized[1:]}"
+    return sanitized
+
+
 PYPROJECT_CONFIG = toml.load("pyproject.toml")
 TOOL_CONFIG = PYPROJECT_CONFIG["tool"]["poetry"]
 
@@ -57,7 +77,7 @@ PYTHON_VER = os.getenv("PYTHON_VER", "3.12")
 # Name of the docker image/image
 IMAGE_NAME = os.getenv("IMAGE_NAME", TOOL_CONFIG["name"])
 # Tag for the image
-IMAGE_VER = os.getenv("IMAGE_VER", f"{TOOL_CONFIG['version']}-py{PYTHON_VER}")
+IMAGE_VER = sanitize_image_tag(os.getenv("IMAGE_VER", f"{TOOL_CONFIG['version']}-py{PYTHON_VER}"))
 # Gather current working directory for Docker commands
 PWD = os.getcwd()
 # Local or Docker execution provide "local" to run locally without docker execution
