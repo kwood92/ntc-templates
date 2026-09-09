@@ -1,0 +1,8 @@
+---
+parsed_sample:
+  - description: []
+    id: "0"
+    mode: "802.3ad"
+    name: "bond1"
+    slaves: "sfp-sfpplus4,sfp-sfpplus5"
+    status: "R"
