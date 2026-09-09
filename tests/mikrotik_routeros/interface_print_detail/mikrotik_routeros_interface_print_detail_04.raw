@@ -1,0 +1,13 @@
+Flags: D - DYNAMIC; X - DISABLED; I - INACTIVE, R - RUNNING; S - SLAVE; P - PASSTHROUGH 
+ 0       ;;; 4G Backup
+         name="ether1" default-name="ether1" type="ether" mtu=1500 actual-mtu=1500 l2mtu=9586 max-l2mtu=9586 vrf=main mac-address=11:11:11:aa:aa:aa link-downs=0 
+
+ 5   RS  ;;; Bond-Switch (Port8 or Port14)
+         name="sfp-sfpplus5" default-name="sfp-sfpplus5" type="ether" mtu=1500 actual-mtu=1500 l2mtu=9578 max-l2mtu=9578 vrf=main mac-address=11:11:11:aa:aa:aa last-link-up-time=2026-09-01 12:56:27 link-downs=0 
+
+ 8   R   ;;; FOO-BAR-BAZ
+         name="sfp-sfpplus8" default-name="sfp-sfpplus8" type="ether" mtu=1600 actual-mtu=1600 l2mtu=9578 max-l2mtu=9578 vrf=main mac-address=11:11:11:aa:aa:aa last-link-down-time=2026-09-01 12:56:40 last-link-up-time=2026-09-01 12:56:42 link-downs=2 
+
+33 D RS  name="vpls1" type="vpls" mtu=1500 actual-mtu=1500 l2mtu=1558 vrf=main mac-address=11:11:11:aa:aa:aa last-link-up-time=2026-09-01 12:57:15 link-downs=0 
+
+37  X    name="vpls:3-NXTM1-AGR06" type="vpls" mtu=1500 vrf=main mac-address=11:11:11:aa:aa:aa link-downs=0 
