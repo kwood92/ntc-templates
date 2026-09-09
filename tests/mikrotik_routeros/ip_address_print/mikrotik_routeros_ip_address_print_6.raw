@@ -1,0 +1,6 @@
+Flags: D - DYNAMIC
+Columns: ADDRESS, NETWORK, INTERFACE, VRF
+#   ADDRESS          NETWORK        INTERFACE     VRF 
+;;; Customer LAN
+0   192.168.1.1/24  192.168.18.0   Customer LAN  main
+1 D 1.1.1.1/32  1.1.1.0  pppoe-out1    main

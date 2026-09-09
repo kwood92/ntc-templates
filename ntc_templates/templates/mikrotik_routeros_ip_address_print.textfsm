@@ -5,18 +5,19 @@ Value IP (\S+)
 Value SUBNET (\d+)
 Value NETWORK (\S+)
 Value INTERFACE (.*?)
+Value VRF (\S+)
 
 Start
-  ^\s*Flags:\s*(?:X\s*-\s*(DISABLED|disabled),)?\s*(?:I\s*-\s*(INVALID|invalid),)?\s*(?:D\s*-\s*(?:DYNAMIC|dynamic))?\s*
-  ^\s*Columns:\s*ADDRESS,\s*NETWORK,\s*INTERFACE\s*$$
-  ^\s*#\s+ADDRESS\s+NETWORK\s+INTERFACE\s*$$ -> IPsTable
+  ^\s*Flags:\s*(?:X\s*-\s*disabled,)?\s*(?:I\s*-\s*invalid,)?\s*(?:D\s*-\s*(?:DYNAMIC|dynamic))?\s*$$
+  ^\s*Columns:\s*ADDRESS,\s*NETWORK,\s*INTERFACE(,\s*VRF)?\s*$$
+  ^\s*#\s+ADDRESS\s+NETWORK\s+INTERFACE(\s*VRF)?\s*$$ -> IPsTable
   ^\s*$$
   ^. -> Error
 
 IPsTable
-  ^\s*${NUM}\s+(?:${FLAGS}\s+)?${IP}/${SUBNET}\s+${NETWORK}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*${NUM}\s+(?:${FLAGS}\s+)?${IP}/${SUBNET}\s+${NETWORK}\s+${INTERFACE}(\s+${VRF})?\s*$$ -> Record
   ^\s*;{3}\s*${COMMENT}\s*$$
   ^\s*${NUM}\s+(?:${FLAGS}\s+)?;;;\s+${COMMENT}\s*$$
-  ^\s*${IP}/${SUBNET}\s+${NETWORK}\s+${INTERFACE}\s*$$ -> Record
+  ^\s*${IP}/${SUBNET}\s+${NETWORK}\s+${INTERFACE}(\s+${VRF})?\s*$$ -> Record
   ^\s*$$
   ^. -> Error

@@ -1,0 +1,18 @@
+---
+parsed_sample:
+  - comment: "Customer LAN"
+    flags: ""
+    interface: "Customer LAN"
+    ip: "192.168.1.1"
+    network: "192.168.18.0"
+    num: "0"
+    subnet: "24"
+    vrf: "main"
+  - comment: ""
+    flags: "D"
+    interface: "pppoe-out1"
+    ip: "1.1.1.1"
+    network: "1.1.1.0"
+    num: "1"
+    subnet: "32"
+    vrf: "main"
