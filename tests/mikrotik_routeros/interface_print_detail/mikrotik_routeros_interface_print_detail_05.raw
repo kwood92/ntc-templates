@@ -1,0 +1,4 @@
+Flags: X - DISABLED; R - RUNNING
+ 0  R name="ether1" default-name="ether1" type="ether" mtu=1500 actual-mtu=1500 l2mtu=9586 max-l2mtu=9586 vrf=main mac-address=11:11:11:aa:aa:aa link-downs=0 
+
+ 1  X name="ether2" default-name="ether2" type="ether" mtu=1500 vrf=main mac-address=11:11:11:aa:aa:aa link-downs=0 
