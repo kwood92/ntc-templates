@@ -1,0 +1,16 @@
+Flags: X - DISABLED
+Columns: ADDRESS, NETWORK, INTERFACE
+#   ADDRESS           NETWORK       INTERFACE        
+;;; comment-1       
+0   192.168.100.42/30   192.168.100.40  ether1           
+;;; comment-2         
+1   192.168.100.50/30   192.168.100.48  ether2           
+;;; comment-3
+2   192.168.101.254/22     192.168.101.0      bridge:LAN       
+;;; comment-4
+3   192.168.102.18/32   192.168.102.18  Lo0              
+4 X 192.168.103.244/24  192.168.103.0   bridge:LAN       
+;;; comment-5 
+5   192.168.104.254/24    192.168.104.0     vlan10@bridge:LAN
+;;; comment-6 
+6   192.168.105.254/24    192.168.105.0     vlan20@bridge:LAN
