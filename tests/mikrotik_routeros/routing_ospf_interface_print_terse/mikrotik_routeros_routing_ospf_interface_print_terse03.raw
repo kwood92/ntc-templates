@@ -1,0 +1,2 @@
+0 D comment=comment-1 interface=ether1 address=192.168.100.6%ether1 area=TRG instance-id=0 state=ptp type=ptp cost=100 priority=128 retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s
+1 D comment=comment-2 interface=l2tp-out1 address=192.168.101.216%l2tp-out1 area=TRG instance-id=0 state=ptp type=ptp cost=200 priority=128 retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s
