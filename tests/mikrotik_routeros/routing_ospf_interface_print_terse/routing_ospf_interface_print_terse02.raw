@@ -1,0 +1,2 @@
+0 D address=192.168.100.154%ether1 area=TRG state=ptp network-type=ptp cost=100 retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s
+1 D address=192.168.101.230%l2tp-out1 area=TRG state=ptp network-type=ptp cost=200 retransmit-interval=5s transmit-delay=1s hello-interval=10s dead-interval=40s
