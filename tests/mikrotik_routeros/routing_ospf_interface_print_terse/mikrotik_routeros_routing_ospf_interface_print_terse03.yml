@@ -1,0 +1,10 @@
+---
+parsed_sample:
+  - cost: "100"
+    dynamic: "D"
+    interface: "ether1"
+    passive: ""
+  - cost: "200"
+    dynamic: "D"
+    interface: "l2tp-out1"
+    passive: ""
