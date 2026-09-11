@@ -8,7 +8,7 @@ Value INTERFACE (.*?)
 Value VRF (\S+)
 
 Start
-  ^\s*Flags:\s*(?:X\s*-\s*(?:DISABLED|disabled)[,;]?)?\s*(?:I\s*-\s*(?:INVALID|invalid)[,;]?)?\s*(?:D\s*-\s*(?:DYNAMIC|dynamic))?\s*$$
+  ^\s*Flags:\s*(?:X(?:\s*-\s*(?:DISABLED|disabled))?[,;]?)?\s*(?:I(?:\s*-\s*(?:INVALID|invalid))?[,;]?)?\s*(?:D(?:\s*-\s*(?:DYNAMIC|dynamic))?[,;]?)?\s*$$
   ^\s*Columns:\s*ADDRESS,\s*NETWORK,\s*INTERFACE(,\s*VRF)?\s*$$
   ^\s*#\s+ADDRESS\s+NETWORK\s+INTERFACE(\s*VRF)?\s*$$ -> IPsTable
   ^\s*$$

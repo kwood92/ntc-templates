@@ -1,5 +1,13 @@
-Flags: X - DISABLED
+Flags: X, D - DYNAMIC
 Columns: ADDRESS, NETWORK, INTERFACE
-#   ADDRESS            NETWORK         INTERFACE
-0 X 10.0.0.1/24        10.0.0.0        bridge_LAN
-1 X 10.0.1.1/24        10.0.1.0        bridge_GUEST
+#   ADDRESS           NETWORK        INTERFACE 
+;;; Uplink - Primary
+0   1.1.1.1/30  1.1.1.0  ether1    
+;;; LAN
+1   192.168.1.1/24    192.168.1.0      bridge:LAN
+;;; Loopback
+2   192.168.1.1/24   192.168.1.0   Lo0       
+;;; VDSL modem
+3 X 192.168.1.1/24  192.168.1.0   ether1    
+4 D 192.168.1.1/24  192.168.1.0   lte1      
+5 D 192.168.1.1/24  192.168.1.0   l2tp-out1
