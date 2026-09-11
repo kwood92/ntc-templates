@@ -7,7 +7,7 @@ Value VLAN_ID (\d+)
 Value SERVICE_TAG (yes|no)
 
 Start
-  ^\s*Flags:\s*X\s*-\s*disabled,\s*R\s*-\s*running\s*$$ -> Vlan
+  ^\s*Flags:\s*X\s*-\s*(?:DISABLED|disabled),\s*R\s*-\s*(?:RUNNING|running)(?:;\s*H\s*-\s*(?:HW-OFFLOADED|hw-offloaded))?\s*$$ -> Vlan
   ^\s*$$
   ^. -> Error
 
