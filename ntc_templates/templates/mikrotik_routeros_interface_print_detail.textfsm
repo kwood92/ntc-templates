@@ -17,7 +17,7 @@ Value LINK_DOWNS (\d+)
 Value VRF (\S+)
 
 Start
-  ^\s*Flags:\s*(?:D\s*-\s*(?:DYNAMIC|dynamic)[,;]?\s*)?(?:X\s*-\s*(?:DISABLED|disabled)[,;]?\s*)?(?:I\s*-\s*(?:INACTIVE|inactive)[,;]?\s*)?(?:R\s*-\s*(?:RUNNING|running)[,;]?\s*)?(?:S\s*-\s*(?:SLAVE|slave)[,;]?\s*)?(?:P\s*-\s*(?:PASSTHROUGH|passthrough)[,;]?\s*)?$$ -> Interface
+  ^\s*Flags:\s+D\s+-\s+(?:DYNAMIC|dynamic)(;|,)\s+X\s+-\s+(?:DISABLED|disabled)(;|,)(\s*I\s*-\s*(?:INACTIVE|inactive)[,;])?\s+R\s+-\s+(?:RUNNING|running)(;|,)\s+S\s+-\s+(?:SLAVE|slave)(;|,)?\s*(P\s+-\s+(?:PASSTHROUGH|passthrough))?\s*$$ -> Interface
   ^\s*$$
   ^. -> Error
 
