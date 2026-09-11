@@ -1,0 +1,9 @@
+---
+parsed_sample:
+  - description: []
+    id: "0"
+    name: "vlan15@ether1"
+    parent_interface: "ether1"
+    service_tag: "no"
+    status: "R"
+    vlan_id: "15"
