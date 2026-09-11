@@ -1,9 +1,0 @@
----
-parsed_sample:
-  - description:
-      - "Uplink to core"
-    id: "0"
-    mode: "802.3ad"
-    name: "bond1"
-    slaves: "sfp-sfpplus1,sfp-sfpplus2"
-    status: "R"

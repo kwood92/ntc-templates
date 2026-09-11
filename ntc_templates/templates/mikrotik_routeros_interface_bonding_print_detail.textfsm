@@ -6,7 +6,7 @@ Value List DESCRIPTION (.+?)
 Value MODE (\S+)
 
 Start
-  ^\s*Flags:\s*(?:X\s*-\s*(?:DISABLED|disabled)[,;]?\s*)?(?:R\s*-\s*(?:RUNNING|running)[,;]?\s*)?$$ -> Interface
+  ^\s*Flags:\s*X\s*-\s*(?:DISABLED|disabled)(?:;|,)\s*R\s*-\s*(?:RUNNING|running)\s*$$ -> Interface
   ^\s*$$
   ^. -> Error
 
