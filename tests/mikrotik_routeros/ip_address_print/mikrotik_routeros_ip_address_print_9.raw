@@ -1,5 +1,0 @@
-Flags: X - DISABLED
-Columns: ADDRESS, NETWORK, INTERFACE
-#   ADDRESS            NETWORK         INTERFACE
-0 X 10.0.0.1/24        10.0.0.0        bridge_LAN
-1 X 10.0.1.1/24        10.0.1.0        bridge_GUEST
