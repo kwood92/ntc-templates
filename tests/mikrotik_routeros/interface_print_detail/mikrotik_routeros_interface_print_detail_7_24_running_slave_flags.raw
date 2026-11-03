@@ -1,0 +1,12 @@
+Flags: R - RUNNING; S - SLAVE
+0 R  name="ether1" default-name="ether1" type="ether" mtu=1500 actual-mtu=1500 vrf=main mac-address=0C:00:FE:2B:11:00 last-link-up-time=2026-11-03 23:47:28 link-downs=0
+ 
+1 RS name="ether2" default-name="ether2" type="ether" mtu=1500 actual-mtu=1500 vrf=main mac-address=AA:C1:AB:16:01:41 last-link-up-time=2026-11-03 23:47:28 link-downs=0
+ 
+2 RS name="ether3" default-name="ether3" type="ether" mtu=1500 actual-mtu=1500 vrf=main mac-address=AA:C1:AB:F9:AE:38 last-link-up-time=2026-11-03 23:47:28 link-downs=0
+ 
+3 R  name="bond1" type="bond" mtu=1500 actual-mtu=1500 l2mtu=1500 vrf=main mac-address=AA:C1:AB:16:01:41 last-link-up-time=2026-11-03 23:47:28 link-downs=0
+ 
+4 R  name="lo" type="loopback" mtu=65536 actual-mtu=65536 vrf=main mac-address=00:00:00:00:00:00 last-link-up-time=2026-11-03 23:47:20 link-downs=0
+ 
+5 R  name="vlan100" type="vlan" mtu=1496 actual-mtu=1496 l2mtu=1496 vrf=main mac-address=AA:C1:AB:16:01:41 last-link-up-time=2026-11-03 23:47:28 link-downs=0

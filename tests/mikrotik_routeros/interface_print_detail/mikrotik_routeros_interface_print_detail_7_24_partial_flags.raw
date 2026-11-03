@@ -1,0 +1,33 @@
+Flags: X - DISABLED; R - RUNNING; S - SLAVE
+ 0  R  ;;; Mgmt [vrnetlab]
+       name="ether1" default-name="ether1" type="ether" mtu=1500 actual-mtu=1500 vrf=main mac-address=0C:00:88:46:ED:00 last-link-up-time=2026-11-03 23:47:24 link-downs=0
+ 
+ 1  RS ;;; Bond member A
+       name="ether2" default-name="ether2" type="ether" mtu=1500 actual-mtu=1500 vrf=main mac-address=AA:C1:AB:1C:D8:0C last-link-up-time=2026-11-03 23:47:24 link-downs=0
+ 
+ 2  RS name="ether3" default-name="ether3" type="ether" mtu=1500 actual-mtu=1500 vrf=main mac-address=AA:C1:AB:6A:8B:FA last-link-up-time=2026-11-03 23:47:24 link-downs=0
+ 
+ 3  R  ;;; Bond to p7-plain-1
+       name="bond1" type="bond" mtu=1500 actual-mtu=1500 l2mtu=1500 vrf=main mac-address=AA:C1:AB:1C:D8:0C last-link-up-time=2026-11-03 23:47:24 link-downs=0
+ 
+ 4  R  name="cust1" type="vrf" mtu=65536 actual-mtu=65536 vrf=main mac-address=62:AC:60:DC:F8:A6 last-link-up-time=2026-11-03 23:47:23 link-downs=0
+ 
+ 5     ;;; GRE to peer
+       name="gre1" type="gre-tunnel" mtu=auto actual-mtu=1472 l2mtu=65535 vrf=main link-downs=0
+ 
+ 6  R  name="lo" type="loopback" mtu=65536 actual-mtu=65536 vrf=main mac-address=00:00:00:00:00:00 last-link-up-time=2026-11-03 23:47:23 link-downs=0
+ 
+ 7  R  ;;; Loopback
+       name="lo0" type="bridge" mtu=auto actual-mtu=1500 l2mtu=65535 vrf=main mac-address=8E:A2:F1:28:60:D1 last-link-up-time=2026-11-03 23:47:23 link-downs=0
+ 
+ 8  R  ;;; Customer VLAN 100
+       name="vlan100" type="vlan" mtu=1496 actual-mtu=1496 l2mtu=1496 vrf=main mac-address=AA:C1:AB:1C:D8:0C last-link-up-time=2026-11-03 23:47:24 link-downs=0
+ 
+ 9  R  ;;; VRF VLAN 200
+       name="vlan200" type="vlan" mtu=1400 actual-mtu=1400 l2mtu=1496 vrf=cust1 mac-address=AA:C1:AB:1C:D8:0C last-link-up-time=2026-11-03 23:47:24 link-downs=0
+ 
+10 X   ;;; Disabled VLAN 300
+       name="vlan300" type="vlan" mtu=1500 vrf=main mac-address=00:00:00:00:00:00 link-downs=0
+ 
+11  R  ;;; WG tunnel
+       name="wg0" type="wg" mtu=1420 actual-mtu=1420 vrf=main last-link-up-time=2026-11-03 23:47:23 link-downs=0
