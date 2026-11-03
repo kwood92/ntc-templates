@@ -11,6 +11,7 @@ parsed_sample:
     factory_software: "6.41.3"
     free_hdd_space: "5.5MiB"
     free_memory: "178.4MiB"
+    minimum_version: ""
     platform: "MikroTik"
     total_hdd_space: "16.0MiB"
     total_memory: "256.0MiB"

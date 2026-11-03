@@ -1,0 +1,17 @@
+uptime: 1m29s                                     
+                  version: 7.24.6 (long-term)                        
+               build-time: 2026-10-30 08:24:29                       
+          minimum-version: 7.1                                       
+              free-memory: 785.5MiB                                  
+             total-memory: 1024.0MiB                                 
+                      cpu: Intel(R)                                  
+                cpu-count: 1                                         
+            cpu-frequency: 2294MHz                                   
+                 cpu-load: 0%                                        
+           free-hdd-space: 69.1MiB                                   
+          total-hdd-space: 89.2MiB                                   
+  write-sect-since-reboot: 656                                       
+         write-sect-total: 656                                       
+        architecture-name: x86_64                                    
+               board-name: CHR QEMU Standard PC (i440FX + PIIX, 1996)
+                 platform: MikroTik
