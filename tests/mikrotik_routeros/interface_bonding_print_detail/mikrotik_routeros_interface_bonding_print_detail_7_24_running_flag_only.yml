@@ -1,0 +1,9 @@
+---
+parsed_sample:
+  - description:
+      - "Bond to p7-plain-1"
+    id: "0"
+    mode: "active-backup"
+    name: "bond1"
+    slaves: "ether2,ether3"
+    status: "R"
