@@ -22,4 +22,5 @@ parsed_sample:
     bad_blocks: "0%"
     architecture_name: "mipsbe"
     board_name: "hEX PoE lite"
+    minimum_version: ""
     platform: "MikroTik"
