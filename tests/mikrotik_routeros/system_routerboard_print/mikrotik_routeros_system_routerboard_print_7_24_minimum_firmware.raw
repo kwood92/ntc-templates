@@ -1,0 +1,8 @@
+       routerboard: yes         
+        board-name: hEX S       
+             model: RB760iGS    
+     serial-number: 000000000000
+     firmware-type: mt7621L     
+  minimum-firmware: 6.41.3      
+  current-firmware: 7.24.6      
+  upgrade-firmware: 7.24.6

@@ -7,5 +7,6 @@ parsed_sample:
     hardware_model: "RBD53iG-5HacD2HnD"
     revision: ""
     routerboard: "yes"
+    minimum_firmware: ""
     serial_number: "HCQ08FX50J7"
     upgrade_firmware: "7.5"
