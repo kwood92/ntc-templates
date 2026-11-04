@@ -1,0 +1,9 @@
+---
+parsed_sample:
+  - description: []
+    id: "0"
+    name: "vlan100"
+    parent_interface: "bond1"
+    service_tag: "no"
+    status: "R"
+    vlan_id: "100"

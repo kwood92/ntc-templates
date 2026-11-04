@@ -1,0 +1,2 @@
+Flags: R - RUNNING
+0  R name="vlan100" mtu=1496 l2mtu=1496 mac-address=AA:C1:AB:16:01:41 arp=enabled arp-timeout=auto loop-protect=default loop-protect-status=off loop-protect-send-interval=5s loop-protect-disable-time=5m vlan-id=100 interface=bond1 use-service-tag=no mvrp=no
