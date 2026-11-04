@@ -7,5 +7,6 @@ parsed_sample:
     hardware_model: "RB750Gr3"
     revision: "r4"
     routerboard: "yes"
+    minimum_firmware: ""
     serial_number: "CC210E592C82"
     upgrade_firmware: "6.49"

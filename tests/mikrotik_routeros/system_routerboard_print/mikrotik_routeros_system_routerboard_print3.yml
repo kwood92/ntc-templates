@@ -7,5 +7,6 @@ parsed_sample:
     hardware_model: "RouterBOARD 750UP r2"
     revision: ""
     routerboard: "yes"
+    minimum_firmware: ""
     serial_number: "8B0208F4D5F9"
     upgrade_firmware: "6.48.6"

@@ -4,6 +4,7 @@ Value HARDWARE_MODEL (.+)
 Value REVISION (.+)
 Value SERIAL_NUMBER (\S+)
 Value FIRMWARE_TYPE (\S+)
+Value MINIMUM_FIRMWARE ([\d.]+)
 Value FACTORY_FIRMWARE ([\d.]+)
 Value CURRENT_FIRMWARE ([\d.]+)
 Value UPGRADE_FIRMWARE ([\d.]+)
@@ -16,6 +17,7 @@ Start
   ^\s*revision:\s${REVISION}
   ^\s*serial-number:\s${SERIAL_NUMBER}
   ^\s*firmware-type:\s${FIRMWARE_TYPE}
+  ^\s*minimum-firmware:\s${MINIMUM_FIRMWARE}
   ^\s*factory-firmware:\s${FACTORY_FIRMWARE}
   ^\s*current-firmware:\s${CURRENT_FIRMWARE}
   ^\s*upgrade-firmware:\s${UPGRADE_FIRMWARE}
