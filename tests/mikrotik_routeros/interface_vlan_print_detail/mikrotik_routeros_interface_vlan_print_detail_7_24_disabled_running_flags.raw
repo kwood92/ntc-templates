@@ -1,0 +1,9 @@
+Flags: X - DISABLED, R - RUNNING
+0  R ;;; Customer VLAN 100
+     name="vlan100" mtu=1496 l2mtu=1496 mac-address=AA:C1:AB:1C:D8:0C arp=enabled arp-timeout=auto loop-protect=default loop-protect-status=off loop-protect-send-interval=5s loop-protect-disable-time=5m vlan-id=100 interface=bond1 use-service-tag=no mvrp=no
+ 
+1  R ;;; VRF VLAN 200
+     name="vlan200" mtu=1400 l2mtu=1496 mac-address=AA:C1:AB:1C:D8:0C arp=enabled arp-timeout=auto loop-protect=default loop-protect-status=off loop-protect-send-interval=5s loop-protect-disable-time=5m vlan-id=200 interface=bond1 use-service-tag=no mvrp=no
+ 
+2  X ;;; Disabled VLAN 300
+     name="vlan300" mtu=1500 mac-address=00:00:00:00:00:00 arp=enabled arp-timeout=auto loop-protect=default loop-protect-status=off loop-protect-send-interval=5s loop-protect-disable-time=5m vlan-id=300 interface=bond1 use-service-tag=no mvrp=no
