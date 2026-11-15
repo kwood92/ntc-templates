@@ -1,0 +1,21 @@
+---
+parsed_sample:
+  - description:
+      - "Uplink bond"
+    id: "0"
+    mode: "active-backup"
+    name: "bond1"
+    slaves: "eoip-a,eoip-b"
+    status: ""
+  - description: []
+    id: "1"
+    mode: "balance-xor"
+    name: "bond2"
+    slaves: "eoip-c"
+    status: "X"
+  - description: []
+    id: "2"
+    mode: "802.3ad"
+    name: "bond3"
+    slaves: "eoip-d"
+    status: ""
